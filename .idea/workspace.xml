@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="953fc8b9-c2a8-4322-aa16-2901aa55db79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603634639057</updated>
-      <workItem from="1603634640995" duration="6594000" />
+      <workItem from="1603634640995" duration="7051000" />
     </task>
     <servers />
   </component>
