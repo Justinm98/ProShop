@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proshop_nodejs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +47,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603634639057</updated>
       <workItem from="1603634640995" duration="7051000" />
+      <workItem from="1603724934727" duration="756000" />
+      <workItem from="1603731122034" duration="784000" />
     </task>
     <servers />
   </component>
