@@ -13,6 +13,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,11 +49,17 @@
       <updated>1603634639057</updated>
       <workItem from="1603634640995" duration="7051000" />
       <workItem from="1603724934727" duration="756000" />
-      <workItem from="1603731122034" duration="784000" />
+      <workItem from="1603731122034" duration="1329000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1603732228301">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1603732228301" />
   </component>
 </project>
