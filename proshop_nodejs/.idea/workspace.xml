@@ -22,22 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="882e8df9-03eb-43c4-9353-61818e727503" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/proshop_nodejs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/error.jade" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.jade" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.jade" beforeDir="false" />
-    </list>
+    <list default="true" id="882e8df9-03eb-43c4-9353-61818e727503" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +98,7 @@
       <workItem from="1605043542231" duration="180000" />
       <workItem from="1605043734148" duration="6838000" />
       <workItem from="1605054604631" duration="190000" />
-      <workItem from="1605056282258" duration="102000" />
+      <workItem from="1605056282258" duration="787000" />
     </task>
     <servers />
   </component>
