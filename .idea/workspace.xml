@@ -44,35 +44,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953fc8b9-c2a8-4322-aa16-2901aa55db79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_guard/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/error.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/jwt.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_model/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_service/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_service/user.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login-input/login-input.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login-input/login-input.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login-input/login-input.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login-input/login-input.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/material-module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/user-profile/user-profile.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/user-profile/user-profile.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/user-profile/user-profile.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proshop-Angular/src/app/user-profile/user-profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +107,7 @@
       <workItem from="1605038876576" duration="18000" />
       <workItem from="1605038949593" duration="458000" />
       <workItem from="1605039457509" duration="2340000" />
-      <workItem from="1605059114912" duration="272000" />
+      <workItem from="1605059114912" duration="995000" />
     </task>
     <servers />
   </component>
