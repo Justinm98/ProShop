@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ProShop_10" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ProShop_10" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:26" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ProShop_10" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ProShop_10" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:26" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="953fc8b9-c2a8-4322-aa16-2901aa55db79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/proshop_nodejs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/public/javascripts/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/routes/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/views/error.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/views/index.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/views/layout.jade" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +81,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proshop_nodejs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../HW5/HW5node_starter" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,6 +94,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Evan\Documents\AngularProjects\proshop\proshop\proshop-Angular\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CS_3754\Term Project\ProShop\proshop\proshop_nodejs\public" />
+      <recent name="D:\CS_3754\Term Project\ProShop\proshop\proshop_nodejs" />
+      <recent name="D:\CS_3754\Term Project\ProShop\proshop\proshop_nodejs\controllers" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -50,16 +113,35 @@
       <workItem from="1603634640995" duration="7051000" />
       <workItem from="1603724934727" duration="756000" />
       <workItem from="1603731122034" duration="1329000" />
+      <workItem from="1604441532778" duration="564000" />
+      <workItem from="1604444705713" duration="413000" />
+      <workItem from="1604675419912" duration="16000" />
+      <workItem from="1605038876576" duration="18000" />
+      <workItem from="1605038949593" duration="458000" />
+      <workItem from="1605039457509" duration="2340000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1603732228301">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="686" y="217" key="FileChooserDialogImpl" timestamp="1604675434599">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1603732228301" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1603733161997" />
+    <state x="686" y="217" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604675434599" />
   </component>
 </project>
