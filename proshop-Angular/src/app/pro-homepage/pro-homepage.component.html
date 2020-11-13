@@ -1,0 +1,43 @@
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content-wrapper">
+      <!-- Navbar -->
+      <mat-toolbar id="navbar">
+        <button mat-icon-button class="sidebar-toggle-btn" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>ProShop</span>
+        <span class="example-spacer"></span>
+        <div>username</div>
+        <button mat-icon-button [disableRipple]="true" class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon style="font-size: 40px">person_outline</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <mat-form-field id="job-searchbar" appearance="standard">
+        <mat-label>Search For Available Jobs</mat-label>
+        <input type="text" matInput>
+      </mat-form-field>
+
+      <div id="job-search-results-container">
+
+      </div>
+      <div id="jobs-recommended-container">
+        <mat-toolbar class="jobs-recommended-title">
+          Recommendations
+        </mat-toolbar>
+        <mat-list>
+          <mat-list-item class="recommendation-item">Recommendation 1</mat-list-item>
+          <mat-list-item class="recommendation-item">Recommendation 2</mat-list-item>
+          <mat-list-item class="recommendation-item">Recommendation 3</mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
