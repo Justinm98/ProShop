@@ -1,0 +1,61 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.content-wrapper{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
+  column-gap: 10px;
+  height: 100vh;
+  width: 100%;
+  background-color: azure;
+}
+#navbar{
+  grid-column: 1/-1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  align-items: center;
+}
+
+.example-spacer{
+  flex: 1 1 auto;
+}
+
+#job-searchbar{
+  position: relative;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: black 5px solid;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+#jobs-recommended-container{
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  border: black 5px solid;
+}
+
+#job-search-results-container{
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  border: black 5px solid;
+}
+.jobs-recommended-title{
+  text-align: center;
+}
+.recommendation-item{
+  border: black 1px solid;
+}

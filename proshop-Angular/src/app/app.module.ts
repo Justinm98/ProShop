@@ -11,6 +11,9 @@ import { LoginInputComponent } from './login-input/login-input.component';
 import { RegisterInputComponent } from './register-input/register-input.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserHomepageComponent } from './user-homepage/user-homepage.component';
+import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     LoginComponent,
     LoginInputComponent,
     RegisterInputComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserHomepageComponent,
+    ProHomepageComponent,
   ],
   imports: [
     BrowserModule,

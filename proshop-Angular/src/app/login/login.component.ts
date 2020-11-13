@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
       // the input type is login, get data from login-input child component
       console.log(this.loginRegisterForm.value.usernameLogin);
       console.log(this.loginRegisterForm.value.passwordLogin);
-      this.router.navigate(['profile']);
+      this.router.navigate(['client/homepage']);
     } else {
       console.log(this.loginRegisterForm.value.firstName);
       console.log(this.loginRegisterForm.value.lastName);
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
       console.log(this.loginRegisterForm.value.lastName);
       console.log(this.loginRegisterForm.value.usernameRegister);
       console.log(this.loginRegisterForm.value.passwordRegister);
-      this.router.navigate(['profile']);
+      this.router.navigate(['pro/homepage']);
     }
   }
 }
