@@ -13,6 +13,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ErrorInterceptor} from './_interceptors/error.interceptor';
+import {JwtInterceptor} from './_interceptors/jwt.interceptor';
 
 
 @NgModule({
@@ -32,9 +35,12 @@ import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

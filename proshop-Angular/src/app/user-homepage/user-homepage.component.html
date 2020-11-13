@@ -12,9 +12,12 @@
       </button>
         <span>ProShop</span>
         <span class="example-spacer"></span>
-        <div>username</div>
+        <div>{{currentUser.username}}</div>
         <button mat-icon-button [disableRipple]="true" class="example-icon" aria-label="Example icon-button with share icon">
           <mat-icon style="font-size: 40px">person_outline</mat-icon>
+        </button>
+        <button mat-flat-button [disableRipple]="true" (click)="logout()" class="example-icon">
+          logout
         </button>
       </mat-toolbar>
 

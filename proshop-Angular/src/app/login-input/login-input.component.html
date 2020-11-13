@@ -1,13 +1,13 @@
 <div class="form-group" [formGroup]="form">
   <mat-form-field appearance="standard" style="width:100%">
     <mat-label>Username</mat-label>
-    <input matInput type="text" formControlName="usernameLogin"  class="form-control" placeholder="or email" >
+    <input matInput type="text" formControlName="usernameLogin"  class="form-control">
   </mat-form-field>
 </div>
 
 <div class="form-group" [formGroup]="form">
-  <mat-form-field appearance="standard">
+  <mat-form-field appearance="standard" style="width:100%">
     <mat-label>Password</mat-label>
-    <input matInput type="text">
+    <input matInput type="password" formControlName="passwordLogin" class="form-control">
   </mat-form-field>
 </div>

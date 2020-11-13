@@ -45,7 +45,6 @@
   <component name="ChangeListManager">
     <list default="true" id="953fc8b9-c2a8-4322-aa16-2901aa55db79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proshop-Angular" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -107,7 +106,8 @@
       <workItem from="1605038876576" duration="18000" />
       <workItem from="1605038949593" duration="458000" />
       <workItem from="1605039457509" duration="2340000" />
-      <workItem from="1605059114912" duration="995000" />
+      <workItem from="1605059114912" duration="2237000" />
+      <workItem from="1605117351368" duration="26000" />
     </task>
     <servers />
   </component>
@@ -127,10 +127,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="686" y="217" key="FileChooserDialogImpl" timestamp="1604675434599">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="579" y="215" key="FileChooserDialogImpl" timestamp="1605117374553">
+      <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1603733161997" />
+    <state x="579" y="215" key="FileChooserDialogImpl/0.0.1620.1040@0.0.1620.1040" timestamp="1605117374553" />
     <state x="686" y="217" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604675434599" />
   </component>
 </project>
