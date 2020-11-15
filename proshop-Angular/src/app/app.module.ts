@@ -11,6 +11,12 @@ import { LoginInputComponent } from './login-input/login-input.component';
 import { RegisterInputComponent } from './register-input/register-input.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {JwtInterceptor} from './_interceptors/jwt.interceptor';
+import {ErrorInterceptor} from './_interceptors/error.interceptor';
+import { UserHomepageComponent } from './user-homepage/user-homepage.component';
+import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +24,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     LoginComponent,
     LoginInputComponent,
     RegisterInputComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserHomepageComponent,
+    ProHomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +35,13 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,8 +17,7 @@ export class RegisterInputComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  register(){
-
+  clickRole(data){
+    console.log(data);
   }
-
 }

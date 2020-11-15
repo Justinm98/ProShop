@@ -44,8 +44,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953fc8b9-c2a8-4322-aa16-2901aa55db79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_guard/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_guard/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/error.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_interceptors/jwt.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_model/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_model/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_service/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/_service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/_service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/app/register-input/register-input.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop-Angular/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proshop-Angular/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/routes/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/routes/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_nodejs/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_nodejs/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proshop_utils/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proshop_utils/src/app/app.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +88,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proshop_nodejs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,6 +124,7 @@
       <workItem from="1605038949593" duration="458000" />
       <workItem from="1605039457509" duration="2340000" />
       <workItem from="1605059114912" duration="995000" />
+      <workItem from="1605388400916" duration="20000" />
     </task>
     <servers />
   </component>
@@ -127,10 +144,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="686" y="217" key="FileChooserDialogImpl" timestamp="1604675434599">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1605388419358">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1603733161997" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1605388419358" />
     <state x="686" y="217" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604675434599" />
   </component>
 </project>

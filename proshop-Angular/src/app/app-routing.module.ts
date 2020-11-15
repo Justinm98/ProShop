@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
+import {UserHomepageComponent} from './user-homepage/user-homepage.component';
+import {ProHomepageComponent} from './pro-homepage/pro-homepage.component';
 
 const routes: Routes = [{path: '' , component: LoginComponent},
   {path: 'profile', component: UserProfileComponent},
+  {path: 'client/homepage', component: UserHomepageComponent},
+  {path: 'pro/homepage', component: ProHomepageComponent},
   { path: '**', redirectTo: '' }];
+;
 
 //HW5 routes
 // {path: '', component: HomeComponent, canActivate: [AuthGuard]}, {path: 'login', component: LoginComponent},

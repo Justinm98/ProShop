@@ -12,7 +12,9 @@ const secret = config.secret;
             // public routes that don't require authentication
             '/',
             '/user/proposal',
-            '/user/job'
+            '/user/job',
+            '/user/register',
+            '/user/authenticate'
         ]
     });}
 
