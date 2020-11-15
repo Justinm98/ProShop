@@ -80,7 +80,7 @@ export class LoginComponent implements OnInit {
 
     if (!this.loginRegisterForm.valid ){
       console.log('Something went wrong, the login/register form is not valid');
-
+      return;
     }
 
     if (this.isInputTypeLogin){

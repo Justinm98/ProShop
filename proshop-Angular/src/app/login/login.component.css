@@ -6,7 +6,7 @@
   column-gap: 10px;
   height: 100vh;
   width: 100%;
-  background-color: azure;
+  background-color: #85c3cf;
 }
 .page-header{
   position: relative;
@@ -14,7 +14,8 @@
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: burlywood;
+  background-color: #212121;
+  border-bottom: solid 5px lightgray;
 }
 .login-registration-container{
   position: relative;
@@ -90,7 +91,7 @@
   transform: translate(-50%, -50%);
 }
 .login-registration-form{
-  background-color: azure;
+  background-color: lightgray;
   border: solid 5px black;
   border-radius: 15px;
   padding: 10px;
@@ -102,7 +103,7 @@
   left: -15px;
   right: -15px;
   bottom: -15px;
-  background: burlywood;
+  background: #34acbc;
   z-index: -1;
   border-radius: inherit;
 }
@@ -118,7 +119,7 @@
   width: 100%;
 }
 .login-register-toggle{
-  background-color: azure;
+  background-color: lightgray;
   margin: 0px 10px 0px 10px;
   font-size: large;
 }
@@ -128,5 +129,6 @@
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 5;
-  background-color: burlywood;
+  /*background-color: #212121;*/
+  /*border-top: solid 5px lightgray;*/
 }
