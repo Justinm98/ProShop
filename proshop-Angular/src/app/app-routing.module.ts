@@ -4,11 +4,13 @@ import {LoginComponent} from './login/login.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {UserHomepageComponent} from './user-homepage/user-homepage.component';
 import {ProHomepageComponent} from './pro-homepage/pro-homepage.component';
+import {ProInfoRegisterComponent} from './pro-info-register/pro-info-register.component';
 
 const routes: Routes = [{path: '' , component: LoginComponent},
   {path: 'profile', component: UserProfileComponent},
   {path: 'client/homepage', component: UserHomepageComponent},
   {path: 'pro/homepage', component: ProHomepageComponent},
+  {path: 'pro/info-register', component: ProInfoRegisterComponent},
   { path: '**', redirectTo: '' }];
 ;
 

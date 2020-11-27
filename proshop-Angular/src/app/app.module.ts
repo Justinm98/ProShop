@@ -16,6 +16,7 @@ import {JwtInterceptor} from './_interceptors/jwt.interceptor';
 import {ErrorInterceptor} from './_interceptors/error.interceptor';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
+import { ProInfoRegisterComponent } from './pro-info-register/pro-info-register.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
     RegisterInputComponent,
     UserProfileComponent,
     UserHomepageComponent,
-    ProHomepageComponent
+    ProHomepageComponent,
+    ProInfoRegisterComponent
   ],
   imports: [
     BrowserModule,

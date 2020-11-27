@@ -133,7 +133,8 @@ export class LoginComponent implements OnInit {
         .subscribe(
           data => {
             console.log('Success:', data);
-            this.inputTypeIsLogin();
+            //this.inputTypeIsLogin();
+            this.router.navigate(['pro/info-register', data]);
           },
           error => {
 
