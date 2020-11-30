@@ -51,6 +51,12 @@
   display: flex;
   justify-content: center;
 }
+.skill-checkbox-container{
+
+}
+.skill-checkbox{
+  margin-right: 5px;
+}
 .submit{
   display: flex;
   justify-content: center;
