@@ -34,9 +34,9 @@ async function addJob(req) {
     const job = new Job({
         createdByUser: req.user.sub,
         budget: jobInfo.budget,
-        jobDescription:jobInfo.jobDescription,
-        createdDate: new Date(jobInfo.startTime),
-        deadlineDate: jobInfo.deadlineDate
+        jobDescription:jobInfo.description,
+        createdDate: new Date(),
+        completionDate: jobInfo.completionDate
     });
 
     return await job.save();

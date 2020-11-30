@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Create Listing</h1>
+<form [formGroup]="createListingForm" (ngSubmit)="submit()">
+<div mat-dialog-content>
+  <p>Enter Listing Information</p>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput type="text" formControlName="title" class="form-control" placeholder="" >
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput type="text" formControlName="description" class="form-control" placeholder=""></textarea>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Budget</mat-label>
+      <input matInput type="text" formControlName="budget" class="form-control" placeholder="$0" >
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a completion date</mat-label>
+      <input matInput formControlName="completionDate" class="form-control" [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="submit()">Ok</button>
+</div>

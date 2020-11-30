@@ -1,9 +1,21 @@
+
+
 .example-container {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 900;
+}
+
+.modal {
+  z-index: 1000;
+  position: fixed;
+  top: 30px;
+  bottom: 0;
+  left: 300px;
+  width: 500px;
 }
 .content-wrapper{
   position: relative;
@@ -46,5 +58,9 @@
 }
 
 mat-card-actions{
+
+}
+
+.btn btn-lg btn-outline-primary {
 
 }

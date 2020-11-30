@@ -6,13 +6,12 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
     createdByUser: { type: Schema.Types.ObjectId, ref: 'User' },
+    title: { type: String, required: true, default: 'No Title'},
     budget: { type: String, required: true, default: '$0'},
     jobDescription: { type: String, required: true, default:"No description set" },
     createdDate: { type: Date, default: Date.now },
-    deadlineDate: { type: Date, required: false }
+    completionDate: { type: Date, required: false }
 });
-
-schema.index({courseNumber:1, courseDeptCode:1}, { unique: true });
 
 schema.set('toJSON', { virtuals: true });
 

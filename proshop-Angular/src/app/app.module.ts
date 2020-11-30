@@ -17,6 +17,7 @@ import {ErrorInterceptor} from './_interceptors/error.interceptor';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
 import { ProInfoRegisterComponent } from './pro-info-register/pro-info-register.component';
+import { CreateListingComponent } from './create-listing/create-listing.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ProInfoRegisterComponent } from './pro-info-register/pro-info-register.
     UserProfileComponent,
     UserHomepageComponent,
     ProHomepageComponent,
-    ProInfoRegisterComponent
+    ProInfoRegisterComponent,
+    CreateListingComponent
   ],
   imports: [
     BrowserModule,
