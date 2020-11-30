@@ -19,12 +19,13 @@ export class ProInfoRegisterComponent implements OnInit {
   error = '';
   currentUser: User;
   description: '';
-  skill1: boolean;
-  skill2: boolean;
-  skill3: boolean;
-  skill4: boolean;
-  skill5: boolean;
-  skill6: boolean;
+  programming: boolean;
+  webDev: boolean;
+  graphicDesign: boolean;
+  digitalMarketing: boolean;
+  business: boolean;
+  musicAudio: boolean;
+  video: boolean;
   otherSkill = '';
 
   constructor(private formBuilder: FormBuilder,
@@ -39,17 +40,30 @@ export class ProInfoRegisterComponent implements OnInit {
       link2: [' '],
       link3: [' '],
       description: [' '],
-      skill1: [' '],
-      skill2: [' '],
-      skill3: [' '],
-      skill4: [' '],
-      skill5: [' '],
-      skill6: [' '],
+      programming: [null],
+      webDev: [null],
+      graphicDesign: [null],
+      digitalMarketing: [null],
+      business: [null],
+      musicAudio: [null],
+      video: [null],
+      otherSkill: [' '],
 
     });
   }
 
   submit(){
-
+    console.log('link1: ' + this.InfoRegisterForm.value.link1);
+    console.log('link2: ' + this.InfoRegisterForm.value.link2);
+    console.log('link3: ' + this.InfoRegisterForm.value.link3);
+    console.log('description: ' + this.InfoRegisterForm.value.description);
+    console.log('programming: ' + this.InfoRegisterForm.value.programming);
+    console.log('webDev: ' + this.InfoRegisterForm.value.webDev);
+    console.log('graphicDesign: ' + this.InfoRegisterForm.value.graphicDesign);
+    console.log('digitalMarketing: ' + this.InfoRegisterForm.value.digitalMarketing);
+    console.log('business: ' + this.InfoRegisterForm.value.business);
+    console.log('musicAudio: ' + this.InfoRegisterForm.value.musicAudio);
+    console.log('video: ' + this.InfoRegisterForm.value.video);
+    console.log('otherSkill: ' + this.InfoRegisterForm.value.otherSkill);
   }
 }
