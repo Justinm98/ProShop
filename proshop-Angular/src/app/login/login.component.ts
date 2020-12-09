@@ -133,8 +133,18 @@ export class LoginComponent implements OnInit {
         .subscribe(
           data => {
             console.log('Success:', data);
-            //this.inputTypeIsLogin();
-            this.router.navigate(['pro/info-register', data]);
+
+            this.authService.login(this.loginRegisterForm.value.username, this.loginRegisterForm.value.password).subscribe(
+              // tslint:disable-next-line:no-shadowed-variable
+              data => {
+                this.router.navigate(['pro/info-register']);
+              }, error => {
+                this.notifService.showNotif(error, 'error');
+                console.log('Error:', error);
+                this.loading = false;
+              }
+            );
+
           },
           error => {
 

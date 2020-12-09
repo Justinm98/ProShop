@@ -5,7 +5,6 @@ import {User} from '../_model/user';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { CreateListingComponent } from '../create-listing/create-listing.component';
 import {first} from 'rxjs/operators';
-import {FormGroup, Validators} from '@angular/forms';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {JobService} from '../_service/job.service';
 

@@ -14,7 +14,8 @@ const secret = config.secret;
             '/user/proposal',
             '/user/job',
             '/user/register',
-            '/user/authenticate'
+            '/user/authenticate',
+            '/proInfo/registerProInfo'
         ]
     });}
 
