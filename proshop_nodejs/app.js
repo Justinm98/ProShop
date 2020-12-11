@@ -25,7 +25,7 @@ app.use('/job', require('./routes/job.router'));
 //TODO: need to connect '/attendance' routes to the router.
 app.use('/proposal', require('./routes/proposal.router'));
 app.use('/proInfo', require('./routes/proInfo.router'));
-
+app.user('/jobSearch', require('./routes/jobSearch.router'));
 
 app.use(errorHandler);
 
