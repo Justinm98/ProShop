@@ -5,16 +5,18 @@
   left: 0;
   right: 0;
 }
+
 .content-wrapper{
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1fr 1fr 8fr 1fr;
   column-gap: 10px;
   height: 100vh;
   width: 100%;
   background-color: azure;
 }
+
 #navbar{
   grid-column: 1/-1;
   grid-row-start: 1;
@@ -33,18 +35,20 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  border: black 5px solid;
-  border-radius: 20px;
+
   padding: 10px 10px 10px 10px;
+}
+.search-border{
+  border: black 1px solid;
+  border-radius: 20px;
 }
 
 #jobs-recommended-container{
   position: relative;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  border: black 5px solid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 #job-search-results-container{
@@ -59,3 +63,4 @@
 .recommendation-item{
   border: black 1px solid;
 }
+

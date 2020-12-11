@@ -1,6 +1,6 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    Sidenav content
+
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -12,13 +12,20 @@
         </button>
         <span>ProShop</span>
         <span class="example-spacer"></span>
-        <div>username</div>
+        <span>
+          <button mat-flat-button> Profile </button>
+          <button mat-flat-button> Current Bids </button>
+          <button mat-flat-button> Logout </button>
+        </span>
+        <span class="example-spacer"></span>
+        <div>{{currentUser.username}}</div>
         <button mat-icon-button [disableRipple]="true" class="example-icon" aria-label="Example icon-button with share icon">
           <mat-icon style="font-size: 40px">person_outline</mat-icon>
         </button>
       </mat-toolbar>
 
       <mat-form-field id="job-searchbar" appearance="standard">
+        <mat-icon matPrefix style="margin-right: 10px;">search</mat-icon>
         <mat-label>Search For Available Jobs</mat-label>
         <input type="text" matInput>
       </mat-form-field>
@@ -27,14 +34,7 @@
 
       </div>
       <div id="jobs-recommended-container">
-        <mat-toolbar class="jobs-recommended-title">
-          Recommendations
-        </mat-toolbar>
-        <mat-list>
-          <mat-list-item class="recommendation-item">Recommendation 1</mat-list-item>
-          <mat-list-item class="recommendation-item">Recommendation 2</mat-list-item>
-          <mat-list-item class="recommendation-item">Recommendation 3</mat-list-item>
-        </mat-list>
+        <button mat-button> Recommended Jobs</button>
       </div>
     </div>
 

@@ -15,8 +15,8 @@ import {proInfo} from '../_model/proInfo';
 export class ProHomepageComponent implements OnInit {
 
   opened: boolean;
-  private currentUser: User;
-  private proData: proInfo;
+  currentUser: User;
+  proData: proInfo;
   constructor(private route: Router,
               private authService: AuthService,
               private userService: UserService,
