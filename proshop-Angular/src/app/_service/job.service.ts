@@ -1,10 +1,7 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Job } from '../_model/job';
-
-
+import { Proposal } from '../_model/Proposal';
 
 
 @Injectable({ providedIn: 'root' })
@@ -32,5 +29,9 @@ export class JobService {
   //TODO: make a post request that will send the course object to the back end.
   createJob(job: Job) {
     return this.http.post(`http://localhost:4000/job/createjob`, job);
+  }
+
+  createProposal(proposal: Proposal) {
+    return this.http.post(`http://localhost:4000/job/createproposal`, proposal);
   }
 }

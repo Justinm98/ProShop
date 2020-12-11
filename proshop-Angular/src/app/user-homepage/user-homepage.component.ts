@@ -7,6 +7,8 @@ import { CreateListingComponent } from '../create-listing/create-listing.compone
 import {first} from 'rxjs/operators';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {JobService} from '../_service/job.service';
+import {Job} from '../_model/job';
+import {NotificationService} from '../_service/notification.service';
 
 @Component({
   selector: 'app-user-homepage',
@@ -16,18 +18,28 @@ import {JobService} from '../_service/job.service';
 export class UserHomepageComponent implements OnInit {
   currentUser: User;
   opened: boolean;
-
+  jobs: Job[] = [];
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private authService: AuthService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,
+              public jobService: JobService,
+              public notifService: NotificationService) {
     this.authService.currentUser.subscribe(x => this.currentUser = x);
   }
 
   ngOnInit(): void {
+    this.loadAllClasses();
     this.opened = false;
     console.log(this.authService.currentUser);
+  }
+
+  private loadAllClasses() {
+
+    this.jobService.getAll().subscribe(
+      jobs => {this.jobs = jobs; },
+      error => {this.notifService.showNotif(error, 'error'); });
   }
 
   openDialog(): void {
@@ -47,4 +59,24 @@ export class UserHomepageComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  profile(){
+    this.router.navigate(['/profile']);
+  }
+
+  viewJobInfo(id: string) {
+
+    //this.router.navigate(['/studentattendances', {courseID: id, studentID: this.currentUser._id}]);
+  }
+
+  // TODO:  use Router's navigate function to pass courseID to the 'classattendances' component.
+  viewJobProposals(id: string) {
+    //this.router.navigate(['/classattendances', {courseID: id}]);
+  }
+
+  deleteJob(id: string) {
+    this.jobService.delete(id).pipe(first()).subscribe(() => {
+      this.jobs = null;
+      this.loadAllClasses();
+    });
+  }
 }

@@ -18,6 +18,8 @@ import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { ProHomepageComponent } from './pro-homepage/pro-homepage.component';
 import { ProInfoRegisterComponent } from './pro-info-register/pro-info-register.component';
 import { CreateListingComponent } from './create-listing/create-listing.component';
+import { JobItemComponent } from './job-item/job-item.component';
+import { CreateProposalComponent } from './create-proposal/create-proposal.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { CreateListingComponent } from './create-listing/create-listing.componen
     UserHomepageComponent,
     ProHomepageComponent,
     ProInfoRegisterComponent,
-    CreateListingComponent
+    CreateListingComponent,
+    JobItemComponent,
+    CreateProposalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder} from '@angular/forms';
+import {AuthService} from '../_service/auth.service';
+import {MatDialog} from '@angular/material/dialog';
+import {JobService} from '../_service/job.service';
+import {NotificationService} from '../_service/notification.service';
+import {User} from '../_model/user';
 
 @Component({
   selector: 'app-user-profile',
@@ -8,10 +14,28 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class UserProfileComponent implements OnInit {
   opened: boolean;
-  constructor(private route: Router) { }
+  currentUser: User;
+
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              private authService: AuthService,
+              public dialog: MatDialog,
+              public jobService: JobService,
+              public notifService: NotificationService) {
+    this.authService.currentUser.subscribe(x => this.currentUser = x);
+  }
 
   ngOnInit(): void {
     this.opened = false;
+  }
+
+  home() {
+    this.router.navigate(['client/homepage']);
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 
 }

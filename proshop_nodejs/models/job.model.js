@@ -8,9 +8,10 @@ const schema = new Schema({
     createdByUser: { type: Schema.Types.ObjectId, ref: 'User' },
     title: { type: String, required: true, default: 'No Title'},
     budget: { type: String, required: true, default: '$0'},
-    jobDescription: { type: String, required: true, default:"No description set" },
+    description: { type: String, required: true, default:"No description set" },
     createdDate: { type: Date, default: Date.now },
-    completionDate: { type: Date, required: false }
+    completionDate: { type: Date, required: false },
+    skills: [{ type: String, required: true }]
 });
 
 schema.set('toJSON', { virtuals: true });

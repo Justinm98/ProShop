@@ -16,9 +16,7 @@ module.exports = {
 //TODO: here you provide a list of attendances for a given course ID.
 // Remember that on the Angular side the component wants to display  'username', 'firstName', 'lastName', 'attendanceRate', 'id'. Hint: use Mongoose's .populate({path:'...', select:'field1 field2 field3'});
 async function getAllJobs(req) {
-    let jobs = await Job.find({});
-
-    return jobs;
+    return await Job.find().populate({path:'createdBy',select:'username'});
 }
 
 //TODO (optional/bonus): delete an attendance object. The req object will contain the id of the attendance object.
@@ -33,10 +31,12 @@ async function addJob(req) {
 
     const job = new Job({
         createdByUser: req.user.sub,
+        title: jobInfo.title,
         budget: jobInfo.budget,
-        jobDescription:jobInfo.description,
+        description: jobInfo.description,
         createdDate: new Date(),
-        completionDate: jobInfo.completionDate
+        completionDate: jobInfo.completionDate,
+        skills: jobInfo.skills
     });
 
     return await job.save();

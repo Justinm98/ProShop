@@ -1,5 +1,5 @@
 {
     "secret": "a secret that no one should guess",
 
-    "connectionString": "mongodb://localhost/ProShop2"
+    "connectionString": "mongodb://localhost/ProShop"
 }

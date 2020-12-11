@@ -17,7 +17,7 @@ function createJob(req, res, next) {
 
 function getJobs(req,res,next){
     console.log('GetCourses()',req.body);
-    jobService.getAllJobs(req).then(courses => {console.log('# of Courses sent:', courses.length);
+    jobService.getAllJobs(req).then(courses => {console.log('# of jobs sent:', courses.length);
         res.json(courses)}).catch(err => next(err));
 }
 

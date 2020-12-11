@@ -1,9 +1,47 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    Sidenav content
+    <div class="sidebar-button">
+      <button mat-raised-button class="nav-buttons" (click)="home()">Home</button>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <div class="content-wrapper">
+      <!-- Navbar -->
+      <mat-toolbar id="navbar">
+        <button mat-icon-button class="sidebar-toggle-btn" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>ProShop</span>
+        <span class="example-spacer"></span>
+        <div class="user-profile-header">User Profile</div>
+
+        <button mat-flat-button [disableRipple]="true" (click)="logout()" class="example-icon">
+          logout
+        </button>
+      </mat-toolbar>
+
+      <!-- Current Client Jobs available -->
+      <!-- TODO: make a job board, create client job component -->
+      <div class="profile-content">
+        <mat-card class="profile-info-card">
+          <mat-list>
+            <mat-list-item class="profile-info">
+              <mat-icon class="profile-info-icons" style="font-size: 40px">person_outline</mat-icon><p class="profile-label">UserName - </p>{{currentUser.username}}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="profile-info"><p class="profile-label">First Name - </p>{{currentUser.firstName}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="profile-info"><p class="profile-label">Last Name - </p>{{currentUser.lastName}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="profile-info"><p class="profile-label">Email Address - </p>{{currentUser.email}}</mat-list-item>
+          </mat-list>
+        </mat-card>
+      </div>
+
+
+    </div>
+
   </mat-sidenav-content>
+
 </mat-sidenav-container>
