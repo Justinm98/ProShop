@@ -1,5 +1,18 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <div>
+      <mat-list>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button> Profile </button>
+        </mat-list-item>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button> Current Bids </button>
+        </mat-list-item>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button> Logout </button>
+        </mat-list-item>
+      </mat-list>
+    </div>
 
   </mat-sidenav>
 
@@ -13,9 +26,7 @@
         <span>ProShop</span>
         <span class="example-spacer"></span>
         <span>
-          <button mat-flat-button> Profile </button>
-          <button mat-flat-button> Current Bids </button>
-          <button mat-flat-button> Logout </button>
+
         </span>
         <span class="example-spacer"></span>
         <div>{{currentUser.username}}</div>
@@ -30,9 +41,12 @@
         <input type="text" matInput>
       </mat-form-field>
 
-      <div id="job-search-results-container">
-
-      </div>
+      <mat-card id="job-search-results-container">
+        <mat-accordion>
+          <app-search-result-item class="card-item" *ngFor="let job of jobs" [job]="job"
+                                  (makeProposalEvent)="makeProposal($event)" ></app-search-result-item>
+        </mat-accordion>
+      </mat-card>
       <div id="jobs-recommended-container">
         <button mat-button> Recommended Jobs</button>
       </div>

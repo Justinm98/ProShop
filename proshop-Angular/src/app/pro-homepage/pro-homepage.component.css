@@ -55,7 +55,7 @@
   position: relative;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  border: black 5px solid;
+
 }
 .jobs-recommended-title{
   text-align: center;
@@ -63,4 +63,17 @@
 .recommendation-item{
   border: black 1px solid;
 }
+
+
+.sidebar-button {
+  width: 100%;
+}
+
+.mat-accordion {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+
 

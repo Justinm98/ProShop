@@ -1,0 +1,15 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{job.title}} by {{job.createdByUser.firstName}} {{job.createdByUser.lastName}}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{job.createdByUser.username}}
+      {{job.budget}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>{{job.description}}</p>
+  <mat-action-row>
+    <button mat-button color="primary" (click)="makeProposal(job._id)">Apply</button>
+  </mat-action-row>
+</mat-expansion-panel>
