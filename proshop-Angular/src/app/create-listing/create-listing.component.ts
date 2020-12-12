@@ -34,7 +34,7 @@ export class CreateListingComponent implements OnInit {
 
   ngOnInit(): void {
     this.createListingForm = this.formBuilder.group({
-      title: ['', Validators.required, Validators.maxLength(17)],
+      title: ['', Validators.required],
       budget: ['', [Validators.required, Validators.pattern('^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$')]],
       description: ['', Validators.required],
       completionDate: ['', Validators.required],
@@ -63,6 +63,7 @@ export class CreateListingComponent implements OnInit {
         data => {
           //  this.alertService.success('Registration successful', true);
           console.log('Listing was successfully created');
+          this.notifService.showNotif('Listing was successfully created', 'Okay');
         },
         error => {
           console.log('Error:', error);

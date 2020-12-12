@@ -20,4 +20,6 @@ export class RegisterInputComponent implements OnInit {
   clickRole(data){
     console.log(data);
   }
+
+
 }

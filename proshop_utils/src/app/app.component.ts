@@ -230,53 +230,9 @@ export class AppComponent {
         skillCategory: ['Graphic Design'],
         firstName: ['Bob'],
         lastName: ['Billy']
-      }),
-      this.formBuilder.group({
-        title: ['Job6'],
-        budget: ['$6'],
-        description: ['This is job6'],
-        completionDate: [Date.now()],
-        skillCategory: ['Graphic'],
-        firstName: ['Bob'],
-        lastName: ['Billy']
-      }),
-      this.formBuilder.group({
-        title: ['Job7'],
-        budget: ['$7'],
-        description: ['This is job7'],
-        completionDate: [Date.now()],
-        skillCategory: ['Digital Marketing'],
-        firstName: ['Bob'],
-        lastName: ['Billy']
-      }),
-      this.formBuilder.group({
-        title: ['Job8'],
-        budget: ['$8'],
-        description: ['This is job8'],
-        completionDate: [Date.now()],
-        skillCategory: ['Business'],
-        firstName: ['Bob'],
-        lastName: ['Billy']
-      }),
-      this.formBuilder.group({
-        title: ['Job9'],
-        budget: ['$9'],
-        description: ['This is job9'],
-        completionDate: [Date.now()],
-        skillCategory: ['Music / Audio'],
-        firstName: ['Bob'],
-        lastName: ['Billy']
-      }),
-      this.formBuilder.group({
-        title: ['Job10'],
-        budget: ['$10'],
-        description: ['This is job10'],
-        completionDate: [Date.now()],
-        skillCategory: ['Video'],
-        firstName: ['Bob'],
-        lastName: ['Billy']
       })
     ];
+
 
     for( let i = 0; i < this.clientForms.length; i++) {
       this.http.post(`http://localhost:4000/user/register`, this.clientForms[i].value)
