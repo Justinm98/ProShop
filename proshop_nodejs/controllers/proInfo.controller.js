@@ -3,7 +3,8 @@ const proInfoService = require('../services/proInfo.service');
 
 module.exports = {
     registerProInfo,
-    getProInfo
+    getProInfo,
+    updateProInfo
 }
 
 function registerProInfo(req, res, next){
@@ -15,6 +16,12 @@ function registerProInfo(req, res, next){
 function getProInfo(req, res, next){
     console.log(req.params);
     proInfoService.getProInfo(req)
+        .then((data) => res.json(data))
+        .catch(err => next(err));
+}
+
+function updateProInfo(req, res, next){
+    proInfoService.updateProInfo(req)
         .then((data) => res.json(data))
         .catch(err => next(err));
 }

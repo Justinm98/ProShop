@@ -3,13 +3,13 @@
     <div>
       <mat-list>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button> Profile </button>
+          <button class="sidebar-button" mat-flat-button (click)="onProfileBtn()"> Profile </button>
         </mat-list-item>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button> Current Bids </button>
+          <button class="sidebar-button" mat-flat-button (click)="onCurrentProposals()"> Current Bids </button>
         </mat-list-item>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button> Logout </button>
+          <button class="sidebar-button" mat-flat-button (click)="onLogout()"> Logout </button>
         </mat-list-item>
       </mat-list>
     </div>
@@ -35,11 +35,13 @@
         </button>
       </mat-toolbar>
 
-      <mat-form-field id="job-searchbar" appearance="standard">
-        <mat-icon matPrefix style="margin-right: 10px;">search</mat-icon>
-        <mat-label>Search For Available Jobs</mat-label>
-        <input type="text" matInput>
-      </mat-form-field>
+      <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" id="job-searchbar">
+        <mat-form-field style="width: 100%;" appearance="standard">
+          <mat-icon matPrefix style="margin-right: 10px;">search</mat-icon>
+          <mat-label>Search For Available Jobs</mat-label>
+          <input type="text" formControlName="searchString" matInput>
+        </mat-form-field>
+      </form>
 
       <mat-card id="job-search-results-container">
         <mat-accordion>
@@ -48,7 +50,7 @@
         </mat-accordion>
       </mat-card>
       <div id="jobs-recommended-container">
-        <button mat-button> Recommended Jobs</button>
+        <button mat-button (click)="onRecommenedBtn()"> Recommended Jobs</button>
       </div>
     </div>
 

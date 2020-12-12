@@ -21,6 +21,9 @@ import { CreateListingComponent } from './create-listing/create-listing.componen
 import { JobItemComponent } from './job-item/job-item.component';
 import { CreateProposalComponent } from './create-proposal/create-proposal.component';
 import { SearchResultItemComponent } from './search-result-item/search-result-item.component';
+import { ProProfileComponent } from './pro-profile/pro-profile.component';
+import { ProInfoDialogComponent } from './pro-info-dialog/pro-info-dialog.component';
+import { ProProposalDialogComponent } from './pro-proposal-dialog/pro-proposal-dialog.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { SearchResultItemComponent } from './search-result-item/search-result-it
     CreateListingComponent,
     JobItemComponent,
     CreateProposalComponent,
-    SearchResultItemComponent
+    SearchResultItemComponent,
+    ProProfileComponent,
+    ProInfoDialogComponent,
+    ProProposalDialogComponent
   ],
   imports: [
     BrowserModule,

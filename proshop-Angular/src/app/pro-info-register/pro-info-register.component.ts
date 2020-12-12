@@ -108,18 +108,6 @@ export class ProInfoRegisterComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   submit(){
-    console.log('link1: ' + this.InfoRegisterForm.value.link1);
-    console.log('link2: ' + this.InfoRegisterForm.value.link2);
-    console.log('link3: ' + this.InfoRegisterForm.value.link3);
-    console.log('description: ' + this.InfoRegisterForm.value.description);
-    console.log('programming: ' + this.InfoRegisterForm.value.programming);
-    console.log('webDev: ' + this.InfoRegisterForm.value.webDev);
-    console.log('graphicDesign: ' + this.InfoRegisterForm.value.graphicDesign);
-    console.log('digitalMarketing: ' + this.InfoRegisterForm.value.digitalMarketing);
-    console.log('business: ' + this.InfoRegisterForm.value.business);
-    console.log('musicAudio: ' + this.InfoRegisterForm.value.musicAudio);
-    console.log('video: ' + this.InfoRegisterForm.value.video);
-    console.log('otherSkill: ' + this.InfoRegisterForm.value.otherSkill);
 
     this.submitted = true;
     if (!this.InfoRegisterForm.valid ){

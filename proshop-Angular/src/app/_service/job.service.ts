@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Job } from '../_model/job';
 import { Proposal } from '../_model/Proposal';
+import {User} from '../_model/user';
+import {proInfo} from '../_model/proInfo';
 
 
 @Injectable({ providedIn: 'root' })
@@ -33,5 +35,14 @@ export class JobService {
 
   createProposal(proposal: Proposal) {
     return this.http.post(`http://localhost:4000/job/createproposal`, proposal);
+  }
+
+  jobSearch(str: string){
+    return this.http.get<Job[]>(`http://localhost:4000/jobSearch/search/${str}`);
+  }
+
+  recommenedJobSearch(info: proInfo){
+    console.log(info);
+    return this.http.post<Job[]>(`http://localhost:4000/jobSearch/search`, info);
   }
 }

@@ -25,4 +25,7 @@ export class UserService {
     return this.http.get<proInfo>(`http://localhost:4000/proInfo/getProInfo/${id}`);
   }
 
+  updateProInfo(info: proInfo){
+    return this.http.post<proInfo>(`http://localhost:4000/proInfo/update`, info);
+  }
 }
