@@ -44,10 +44,10 @@ export class ProHomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadAllClasses();
+    //this.loadAllClasses();
     this.opened = false;
     this.searchForm = this.formBuilder.group({
-      searchString: ['', [Validators.required]]
+      searchString: ['']
     });
   }
 
@@ -75,14 +75,19 @@ export class ProHomepageComponent implements OnInit {
   }
 
   onSubmit(){
-    this.jobService.jobSearch(this.searchForm.value.searchString).subscribe(
-      data => {
-        this.jobs = data;
-      },
-      err => {
-        console.log(err);
-      }
-    );
+    const str = this.searchForm.value.searchString;
+    if (str.replace(/\s/g, '').length){
+      this.jobService.jobSearch(this.searchForm.value.searchString).subscribe(
+        data => {
+          this.jobs = data;
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    } else {
+      this.notifService.showNotif('Not a valid search!');
+    }
   }
 
   onRecommenedBtn(){

@@ -24,13 +24,11 @@ async function findRecommendedJobs(req){
     let jobsArr = await Job.find({});
     const validJobs = [];
     for(let i = 0; i < jobsArr.length; i++){
-        let jobSkills = jobsArr[i].skills;
-        for(let j = 0; j < jobSkills.length; j++){
-            if(userSkills.includes(jobSkills[j])){
-                validJobs.push(jobsArr[i]);
-                break;
-            }
+        let jobSkill = jobsArr[i].skillCategory;
+        if(userSkills.includes(jobSkill)){
+            validJobs.push(jobsArr[i]);
         }
+
     }
     console.log(validJobs);
     return validJobs;
