@@ -6,6 +6,7 @@ import {Role} from '../_model/role';
 import {ViewJobInfoComponent} from '../view-job-info/view-job-info.component';
 import {MatDialog} from '@angular/material/dialog';
 import {JobProposalListComponent} from '../job-proposal-list/job-proposal-list.component';
+import {JobService} from '../_service/job.service';
 
 @Component({
   selector: 'app-job-item',
@@ -22,7 +23,8 @@ export class JobItemComponent implements OnInit {
 
   constructor(private notifService: NotificationService,
               private authService: AuthService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog,
+              private jobService: JobService) { }
 
   ngOnInit(): void {
     this.authService.currentUser.subscribe(x => {
@@ -64,7 +66,11 @@ export class JobItemComponent implements OnInit {
     const dialogRef = this.dialog.open(JobProposalListComponent, {
       width: '400px',
     });
-    dialogRef.componentInstance.proposals = this.job.proposals;
+
+    this.jobService.getProposalsForJob(this.job._id).subscribe(proposals => {
+      dialogRef.componentInstance.proposals = proposals;
+    });
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
 

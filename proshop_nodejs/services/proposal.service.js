@@ -18,7 +18,8 @@ async function getAllProposals() {
 }
 
 async function getProposalByJobID(req){
-    return await Proposal.find({'job': mongoose.Types.ObjectId(req.body.id)});
+    console.log(req.params.id);
+    return await Proposal.find({'job': mongoose.Types.ObjectId(req.params.id)});
 }
 
 async function deleteProposal(id) {
@@ -36,7 +37,9 @@ async function add(req) {
     else if(!req.user.sub){
         throw 'Error with the user submitting request. User information missing. Malformed request.';
     }
-    const job = await Job.findOne({'_id': proposal.job});
+    console.log(proposal.job);
+    const job = await Job.findOne({'_id': mongoose.Types.ObjectId(proposal.job)});
+    console.log(job);
     job.proposals.push(proposal._id);
     await job.save();
 
@@ -46,14 +49,11 @@ async function add(req) {
 
     proposal = new Proposal(proposal);
 
-
+    console.log(proposal);
     // save user
     await proposal.save();
 }
 
 async function select(req) {
-    let proposal = await Proposal.find({'_id': mongoose.Types.ObjectId(req.body.id)});
-    proposal.chosen = true;
-
-    return await proposal.save();
+    return await Proposal.updateOne({'_id': mongoose.Types.ObjectId(req.body.id)}, {$set: {chosen: true}});
 }

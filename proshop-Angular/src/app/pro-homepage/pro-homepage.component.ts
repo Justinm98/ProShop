@@ -54,6 +54,7 @@ export class ProHomepageComponent implements OnInit {
     const dialogRef = this.dialog.open(CreateProposalComponent, {
       width: '400px',
     });
+    console.log(id);
     dialogRef.componentInstance.job = id;
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -63,7 +64,6 @@ export class ProHomepageComponent implements OnInit {
 
   makeProposal(id: string) {
     this.openDialogMakeProposal(id);
-    return "";
   }
 
 

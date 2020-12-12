@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Proposal} from '../_model/Proposal';
 
 @Component({
@@ -8,12 +8,16 @@ import {Proposal} from '../_model/Proposal';
 })
 export class ProposalItemComponent implements OnInit {
   @Input() proposal: Proposal;
+  @Output() chooseProposalEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  chooseProposal(id: string){
+    this.chooseProposalEvent.emit(id);
+  }
 
 
 }

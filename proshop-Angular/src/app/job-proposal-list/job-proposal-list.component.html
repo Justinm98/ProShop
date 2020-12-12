@@ -1,5 +1,6 @@
 <mat-accordion>
-  <app-proposal-item class="card-item" *ngFor="let proposal of proposals" [proposal]="proposal">
+  <app-proposal-item class="card-item" *ngFor="let proposal of proposals" [proposal]="proposal"
+    (chooseProposalEvent)="chooseProposal($event)">
 
   </app-proposal-item>
 </mat-accordion>

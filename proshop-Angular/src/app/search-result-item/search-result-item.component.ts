@@ -18,7 +18,7 @@ export class SearchResultItemComponent implements OnInit {
   }
 
   makeProposal(id): void {
-    this.makeProposalEvent.emit();
+    this.makeProposalEvent.emit(id);
   }
 
 }

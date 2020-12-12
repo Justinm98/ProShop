@@ -13,7 +13,7 @@ const schema = new Schema({
     duration: {type: String, required: true, default: '1 week'},
     chosen: {type: Boolean, default: false},
     dateCreated: {type: Date, default: Date.now()},
-    description: {type: String, required: false, default: ''},
+    writeup: {type: String, required: false, default: ''},
     title: {type: String, required: true, default: ''}
 
 });

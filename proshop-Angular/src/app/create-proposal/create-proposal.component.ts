@@ -35,7 +35,6 @@ export class CreateProposalComponent implements OnInit {
   ngOnInit(): void {
     this.createProposalForm = this.formBuilder.group({
       title: ['', Validators.required],
-      author: ['', Validators.required],
       cost: ['', [Validators.required, Validators.pattern('^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$')]],
       writeup: ['', Validators.required],
       id: [''],
@@ -53,6 +52,7 @@ export class CreateProposalComponent implements OnInit {
     this.submitted = true;
 
     if (!this.createProposalForm.valid) {
+      console.log('invalid proposal submission');
       return;
     }
     this.createProposalForm.value.job = this.job;

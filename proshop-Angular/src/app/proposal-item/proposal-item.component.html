@@ -8,4 +8,7 @@
     </mat-panel-description>
   </mat-expansion-panel-header>
   <p>{{proposal.writeup}}</p>
+  <mat-action-row>
+    <button mat-button color="primary" (click)="chooseProposal(proposal._id)">Choose</button>
+  </mat-action-row>
 </mat-expansion-panel>

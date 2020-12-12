@@ -18,8 +18,8 @@ export class JobService {
 
 
   //TODO: notice this new function.
-  getProposalsForJob(courseID: string) {
-    return this.http.get<any>(`http://localhost:4000/job/getproposals${courseID}`);
+  getProposalsForJob(jobID: string) {
+    return this.http.get<any>(`http://localhost:4000/proposal/getProposalsByJobID${jobID}`);
   }
 
 
@@ -35,6 +35,10 @@ export class JobService {
 
   createProposal(proposal: Proposal) {
     return this.http.post(`http://localhost:4000/proposal/create`, proposal);
+  }
+
+  selectProposal(id: string){
+    return this.http.post(`http://localhost:4000/proposal/select`, id);
   }
 
   jobSearch(str: string){
