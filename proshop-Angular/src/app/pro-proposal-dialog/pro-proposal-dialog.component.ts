@@ -19,11 +19,26 @@ export class ProProposalDialogComponent implements OnInit {
               private userService: UserService,
               private jobService: JobService) { }
 
-  ngOnInit(): void {
+  getProposals(){
     this.jobService.getProposalByProID(this.currentUser._id).subscribe(
       data => {
         console.log(data);
         this.proposals = data;
+      }, err => {
+        console.log(err);
+      }
+    );
+  }
+  ngOnInit(): void {
+    this.getProposals();
+  }
+
+  onDelete(id: string){
+    this.jobService.deleteProposal(id).subscribe(
+      success => {
+        console.log(success);
+        this.proposals = null;
+        this.getProposals();
       }, err => {
         console.log(err);
       }

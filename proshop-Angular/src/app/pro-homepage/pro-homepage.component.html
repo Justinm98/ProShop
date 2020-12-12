@@ -45,6 +45,7 @@
 
       <mat-card id="job-search-results-container">
         <mat-accordion>
+          <h3 style="text-align: center">Search Results</h3>
           <app-search-result-item class="card-item" *ngFor="let job of jobs" [job]="job"
                                   (deleteProposalEvent)="deleteProposal($event)" (makeProposalEvent)="makeProposal($event)" ></app-search-result-item>
         </mat-accordion>
