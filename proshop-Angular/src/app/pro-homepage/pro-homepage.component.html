@@ -1,15 +1,15 @@
 <mat-sidenav-container class="example-container" >
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+  <mat-sidenav style="background-color: #212121;" #sidenav mode="side" [(opened)]="opened">
     <div>
       <mat-list>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button (click)="onProfileBtn()"> Profile </button>
+          <button style="background-color: #212121" class="sidebar-button" mat-flat-button (click)="onProfileBtn()"> <div style="color: lightgray">Profile</div></button>
         </mat-list-item>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button (click)="onCurrentProposals()"> Current Bids </button>
+          <button style="background-color: #212121" class="sidebar-button" mat-flat-button (click)="onCurrentProposals()"> <div style="color: lightgray">Current Proposals</div> </button>
         </mat-list-item>
         <mat-list-item class="profile-info">
-          <button class="sidebar-button" mat-flat-button (click)="onLogout()"> Logout </button>
+          <button style="background-color: #212121" class="sidebar-button" mat-flat-button (click)="onLogout()"> <div style="color: lightgray">Logout</div> </button>
         </mat-list-item>
       </mat-list>
     </div>
@@ -20,18 +20,18 @@
     <div class="content-wrapper">
       <!-- Navbar -->
       <mat-toolbar id="navbar">
-        <button mat-icon-button class="sidebar-toggle-btn" (click)="sidenav.toggle()">
+        <button style="color: lightgray" mat-icon-button class="sidebar-toggle-btn" (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
-        <span>ProShop</span>
+        <span style="color: lightgray" >ProShop</span>
         <span class="example-spacer"></span>
         <span>
 
         </span>
         <span class="example-spacer"></span>
-        <div>{{currentUser.username}}</div>
-        <button mat-icon-button [disableRipple]="true" class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon style="font-size: 40px">person_outline</mat-icon>
+        <div style="color: lightgray" >{{currentUser.username}}</div>
+        <button style="color: lightgray" mat-icon-button [disableRipple]="true">
+          <mat-icon style="font-size: 40px; color: lightgray">person_outline</mat-icon>
         </button>
       </mat-toolbar>
 

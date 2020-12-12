@@ -14,7 +14,7 @@
   column-gap: 10px;
   height: 100vh;
   width: 100%;
-  background-color: azure;
+  background-color: #34acbc;
 }
 
 #navbar{
@@ -23,6 +23,7 @@
   grid-row-end: 2;
   display: flex;
   align-items: center;
+  background-color: #212121;
 }
 
 .example-spacer{

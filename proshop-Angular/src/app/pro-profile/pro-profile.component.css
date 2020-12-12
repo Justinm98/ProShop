@@ -6,6 +6,10 @@
   column-gap: 10px;
   height: 100vh;
   width: 100%;
+  background-color: #34acbc;
+}
+#navbar{
+  background-color: #212121;
 }
 mat-card-title{
   border-bottom: black 5px solid;

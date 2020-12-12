@@ -17,7 +17,7 @@ module.exports = {
 //TODO: here you provide a list of attendances for a given course ID.
 // Remember that on the Angular side the component wants to display  'username', 'firstName', 'lastName', 'attendanceRate', 'id'. Hint: use Mongoose's .populate({path:'...', select:'field1 field2 field3'});
 async function getAllJobs(req) {
-    results = await Job.find().populate({path:'createdByUser',select:'username firstName lastName'});
+    const results = await Job.find({'createdByUser': mongoose.Types.ObjectId(req.user.sub)});
     console.log(results);
     return results;
 }

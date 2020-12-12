@@ -20,26 +20,34 @@ import {ProInfoDialogComponent} from '../pro-info-dialog/pro-info-dialog.compone
 export class ProProfileComponent implements OnInit {
   currentUser: User;
   proData: proInfo;
-  jobs: Job[];
+  links: string[] = [];
+  personalDes: string;
+  skills: string[] = [];
+  otherSkill: string;
+
   constructor(private router: Router,
               private authService: AuthService,
               private userService: UserService,
-              private notifService: NotificationService,
-              private jobService: JobService,
               public dialog: MatDialog) {
     this.authService.currentUser.subscribe(x => this.currentUser = x);
-
+    this.userService.getProInfo(this.currentUser._id).subscribe(
+      data => {
+        console.log(data);
+        this.proData = data;
+        this.links = this.proData.links;
+        this.personalDes = this.proData.personalDes;
+        this.skills = this.proData.skills;
+        this.otherSkill = this.proData.otherSkills;
+      },
+      err => {
+        console.log(err);
+      });
   }
 
 
 
   ngOnInit(): void {
-    this.userService.getProInfo(this.currentUser._id).subscribe(
-      data => {
-        console.log(data);
-        this.proData = data;
-      },
-      err => {console.log(err)});
+
   }
 
   openDialog(): void {
@@ -50,6 +58,10 @@ export class ProProfileComponent implements OnInit {
 
     dialogRef.beforeClosed().subscribe(data => {
       this.proData = dialogRef.componentInstance.req;
+      this.links = dialogRef.componentInstance.req.links;
+      this.personalDes = dialogRef.componentInstance.req.personalDes;
+      this.skills = dialogRef.componentInstance.req.skills;
+      this.otherSkill = dialogRef.componentInstance.req.otherSkills;
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

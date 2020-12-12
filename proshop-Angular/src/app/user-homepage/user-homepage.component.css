@@ -9,6 +9,7 @@
   z-index: 900;
 }
 
+
 .content-wrapper{
   position: relative;
   display: grid;
@@ -17,7 +18,7 @@
   column-gap: 10px;
   height: 100vh;
   width: 100%;
-  background-color: azure;
+  background-color: #85c3cf;
 }
 #navbar{
   grid-column: 1/-1;
@@ -25,6 +26,7 @@
   grid-row-end: 2;
   display: flex;
   align-items: center;
+  background-color: #212121;
 }
 
 .example-spacer{
@@ -52,4 +54,5 @@
 
 .sidebar-button {
   padding: 20px 10px 20px 10px;
+  background-color: #212121;
 }

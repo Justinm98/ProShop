@@ -121,12 +121,6 @@ export class LoginComponent implements OnInit {
         return;
       }
 
-      console.log(this.loginRegisterForm.value.firstName);
-      console.log(this.loginRegisterForm.value.lastName);
-      console.log(this.loginRegisterForm.value.email);
-      console.log(this.loginRegisterForm.value.lastName);
-      console.log(this.loginRegisterForm.value.username);
-      console.log(this.loginRegisterForm.value.password);
 
       this.userService.register(this.loginRegisterForm.value)
         .pipe(first())
@@ -137,7 +131,12 @@ export class LoginComponent implements OnInit {
             this.authService.login(this.loginRegisterForm.value.username, this.loginRegisterForm.value.password).subscribe(
               // tslint:disable-next-line:no-shadowed-variable
               data => {
-                this.router.navigate(['pro/info-register']);
+                if (this.loginRegisterForm.value.role === 'Client'){
+                  this.router.navigate(['client/homepage']);
+                }else{
+                  this.router.navigate(['pro/info-register']);
+                }
+
               }, error => {
                 this.notifService.showNotif(error, 'error');
                 console.log('Error:', error);

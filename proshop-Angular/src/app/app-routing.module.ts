@@ -6,6 +6,7 @@ import {UserHomepageComponent} from './user-homepage/user-homepage.component';
 import {ProHomepageComponent} from './pro-homepage/pro-homepage.component';
 import {ProInfoRegisterComponent} from './pro-info-register/pro-info-register.component';
 import {ProProfileComponent} from './pro-profile/pro-profile.component';
+import {User} from './_model/user';
 
 
 const routes: Routes = [{path: '' , component: LoginComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [{path: '' , component: LoginComponent},
   {path: 'pro/homepage', component: ProHomepageComponent},
   {path: 'pro/info-register', component: ProInfoRegisterComponent},
   {path: 'pro/profile', component: ProProfileComponent},
+  {path: 'user/homepage', component: UserHomepageComponent},
   {path: 'user/profile', component: UserProfileComponent},
   { path: '**', redirectTo: '' }];
 ;
