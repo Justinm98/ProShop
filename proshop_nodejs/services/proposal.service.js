@@ -16,6 +16,8 @@ async function getAllProposals() {
     return await Proposal.find().populate({path:'createdBy',select:'username'});
 }
 
+
+
 async function deleteProposal(id) {
      return await Proposal.deleteOne({"_id":id});
 }
