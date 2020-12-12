@@ -11,6 +11,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {CreateListingComponent} from '../create-listing/create-listing.component';
 import {CreateProposalComponent} from '../create-proposal/create-proposal.component';
+import {ProProposalDialogComponent} from '../pro-proposal-dialog/pro-proposal-dialog.component';
 
 
 @Component({
@@ -114,6 +115,15 @@ export class ProHomepageComponent implements OnInit {
   }
 
   onCurrentProposals(){
+    const dialogRef = this.dialog.open(ProProposalDialogComponent, {
+      width: '600px',
+    });
+
+    dialogRef.componentInstance.currentUser = this.currentUser;
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
 
   }
 }

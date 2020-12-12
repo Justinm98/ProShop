@@ -5,7 +5,8 @@ module.exports = {
     selectProposal,
     removeProposal,
     getProposals,
-    getProposalByJobID
+    getProposalByJobID,
+    getProposalsByProID
 };
 
 
@@ -47,6 +48,13 @@ function getProposals(req,res,next){
 function getProposalByJobID(req, res, next){
     console.log('getProposalsByJobID()',req.body);
     proposalService.getProposalByJobID(req)
+        .then(attendances => {console.log('# of proposals sent:', attendances.length); res.json(attendances)})
+        .catch(err => next(err));
+}
+
+function getProposalsByProID(req, res, next){
+    console.log('getProposalsByJobID()',req.params.id);
+    proposalService.getAllProposalsForPro(req)
         .then(attendances => {console.log('# of proposals sent:', attendances.length); res.json(attendances)})
         .catch(err => next(err));
 }
