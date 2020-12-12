@@ -3,6 +3,9 @@ import {Job} from '../_model/job';
 import {AuthService} from '../_service/auth.service';
 import {NotificationService} from '../_service/notification.service';
 import {Role} from '../_model/role';
+import {ViewJobInfoComponent} from '../view-job-info/view-job-info.component';
+import {MatDialog} from '@angular/material/dialog';
+import {JobProposalListComponent} from '../job-proposal-list/job-proposal-list.component';
 
 @Component({
   selector: 'app-job-item',
@@ -17,7 +20,9 @@ export class JobItemComponent implements OnInit {
   @Output() viewProposalsEvent = new EventEmitter<string>();
   userRole = '';
 
-  constructor(private notifService: NotificationService, private authService: AuthService) { }
+  constructor(private notifService: NotificationService,
+              private authService: AuthService,
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.authService.currentUser.subscribe(x => {
@@ -42,6 +47,28 @@ export class JobItemComponent implements OnInit {
 
   get isUser() {
     return this.userRole && this.userRole === Role.client;
+  }
+
+  openDialogJobInfo(): void {
+    const dialogRef = this.dialog.open(ViewJobInfoComponent, {
+      width: '400px',
+    });
+    dialogRef.componentInstance.job = this.job;
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
+  }
+
+  openDialogJobProposals(): void {
+    const dialogRef = this.dialog.open(JobProposalListComponent, {
+      width: '400px',
+    });
+    dialogRef.componentInstance.proposals = this.job.proposals;
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
   }
 
 }

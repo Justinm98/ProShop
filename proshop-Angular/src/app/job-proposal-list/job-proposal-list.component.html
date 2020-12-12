@@ -1,0 +1,8 @@
+<mat-accordion>
+  <app-proposal-item class="card-item" *ngFor="let proposal of proposals" [proposal]="proposal">
+
+  </app-proposal-item>
+</mat-accordion>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+</mat-dialog-actions>

@@ -1,0 +1,8 @@
+div {
+  width: 100%;
+}
+.job-info {
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}

@@ -9,6 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {JobService} from '../_service/job.service';
 import {Job} from '../_model/job';
 import {NotificationService} from '../_service/notification.service';
+import {ViewJobInfoComponent} from '../view-job-info/view-job-info.component';
 
 @Component({
   selector: 'app-user-homepage',
@@ -42,7 +43,7 @@ export class UserHomepageComponent implements OnInit {
       error => {this.notifService.showNotif(error, 'error'); });
   }
 
-  openDialog(): void {
+  openDialogAddJob(): void {
     const dialogRef = this.dialog.open(CreateListingComponent, {
       width: '400px',
     });

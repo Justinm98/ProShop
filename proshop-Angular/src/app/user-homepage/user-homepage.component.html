@@ -1,7 +1,7 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
     <div class="sidebar-button">
-      <button mat-raised-button (click)="openDialog()">Create Job Listing</button>
+      <button mat-raised-button (click)="openDialogAddJob()">Create Job Listing</button>
     </div>
 
   </mat-sidenav>
@@ -27,14 +27,15 @@
       <!-- TODO: make a job board, create client job component -->
       <div id="client-job-board">
         <app-job-item class="card-item" *ngFor="let job of jobs" [job]="job"
-                  (viewJobInfoEvent)="viewJobInfo($event)" (deleteEvent) = "deleteJob($event)"
-                  (viewProposalsEvent) = "viewJobProposals($event)"></app-job-item>
+                  (viewJobInfoEvent)="viewJobInfo($event)" (deleteEvent)="deleteJob($event)"
+                  (viewProposalsEvent)="viewJobProposals($event)"></app-job-item>
       </div>
-
     </div>
 
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+
+
 
 
