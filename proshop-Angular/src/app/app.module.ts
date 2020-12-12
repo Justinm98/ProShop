@@ -21,9 +21,15 @@ import { CreateListingComponent } from './create-listing/create-listing.componen
 import { JobItemComponent } from './job-item/job-item.component';
 import { CreateProposalComponent } from './create-proposal/create-proposal.component';
 import { SearchResultItemComponent } from './search-result-item/search-result-item.component';
+
 import { ViewJobInfoComponent } from './view-job-info/view-job-info.component';
 import { JobProposalListComponent } from './job-proposal-list/job-proposal-list.component';
 import { ProposalItemComponent } from './proposal-item/proposal-item.component';
+
+import { ProProfileComponent } from './pro-profile/pro-profile.component';
+import { ProInfoDialogComponent } from './pro-info-dialog/pro-info-dialog.component';
+import { ProProposalDialogComponent } from './pro-proposal-dialog/pro-proposal-dialog.component';
+
 
 
 @NgModule({
@@ -40,9 +46,15 @@ import { ProposalItemComponent } from './proposal-item/proposal-item.component';
     JobItemComponent,
     CreateProposalComponent,
     SearchResultItemComponent,
+
     ViewJobInfoComponent,
     JobProposalListComponent,
-    ProposalItemComponent
+    ProposalItemComponent,
+
+    ProProfileComponent,
+    ProInfoDialogComponent,
+    ProProposalDialogComponent
+
   ],
   imports: [
     BrowserModule,

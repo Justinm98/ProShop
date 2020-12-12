@@ -1,0 +1,46 @@
+<div class="content-wrapper">
+  <!-- Navbar -->
+  <mat-toolbar id="navbar">
+    <button mat-icon-button [disableRipple]="true" (click)="onHomeBtn()" class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon style="font-size: 40px">home</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="pro-info-container">
+    <mat-card id="profile-info-card">
+      <mat-card-title style="margin-bottom: 50px">
+        <div class="profile-pic-container">
+          <div id="profile-pic">
+            {{currentUser.firstName | slice:0:1}}{{currentUser.lastName | slice:0:1}}
+          </div>
+        </div>
+        <div style="margin-bottom: 5px;">{{currentUser.firstName}} {{currentUser.lastName}} ({{currentUser.username}})</div>
+      </mat-card-title>
+      <mat-card-content>
+        <div id="links-container">
+          <h2>My Professional Links</h2>
+          <ul style="list-style-type: none">
+            <li style="margin-bottom: 10px" *ngFor="let link of proData.links; index as i;">
+              <b>Link {{i+1}}:</b> {{link}}
+            </li>
+          </ul>
+        </div>
+        <div id="personDes-container">
+          <h2>My Personal Description</h2>
+          <p>{{proData.personalDes}}</p>
+        </div>
+        <div id="skills-container">
+          <h2>My Skills</h2>
+          <mat-chip-list aria-label="Pro Skills">
+            <mat-chip *ngFor="let skill of proData.skills;">{{skill}}</mat-chip>
+            <mat-chip *ngIf="proData.otherSkills">{{proData.otherSkills}}</mat-chip>
+          </mat-chip-list>
+        </div>
+
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-raised-button color="accent" id="edit-btn" (click)="openDialog()"> EDIT </button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
