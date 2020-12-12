@@ -8,7 +8,7 @@ router.get('/getAllProposals', proposalController.getProposals);
 router.get('/getProposalsByJobID:id', proposalController.getProposalByJobID);
 router.post('/create', proposalController.createProposal);
 router.post('/select', proposalController.selectProposal);
-router.delete('/remove', proposalController.removeProposal);
+router.delete('/:id', proposalController.removeProposal);
 
 
 

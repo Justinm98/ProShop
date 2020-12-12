@@ -45,6 +45,11 @@ export class JobService {
     return this.http.get<Job[]>(`http://localhost:4000/jobSearch/search/${str}`);
   }
 
+  deleteProposal(id: string) {
+    return this.http.delete(`http://localhost:4000/proposal/${id}`);
+
+  }
+
   recommenedJobSearch(info: proInfo){
     console.log(info);
     return this.http.post<Job[]>(`http://localhost:4000/jobSearch/search`, info);

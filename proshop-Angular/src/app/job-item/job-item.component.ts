@@ -58,8 +58,9 @@ export class JobItemComponent implements OnInit {
     dialogRef.componentInstance.job = this.job;
 
     dialogRef.beforeClosed().subscribe(result => {
+
       if (dialogRef.componentInstance.delete === true) {
-        this.jobService.delete(this.job._id);
+       this.deleteEvent.emit(this.job._id);
       }
     });
 

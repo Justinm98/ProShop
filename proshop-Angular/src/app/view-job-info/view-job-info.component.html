@@ -10,6 +10,6 @@
   <div class="job-info">{{job.description}}</div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button (click)="deleteJob(job._id)" mat-button>DELETE</button>
+  <button (click)="deleteJob(job._id)" color="warn" mat-button>DELETE</button>
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
 </mat-dialog-actions>

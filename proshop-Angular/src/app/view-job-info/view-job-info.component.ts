@@ -22,6 +22,7 @@ export class ViewJobInfoComponent implements OnInit {
 
   deleteJob(id: string) {
     this.delete = true;
+    this.dialogRef.close();
   }
 
 

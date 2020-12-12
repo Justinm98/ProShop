@@ -4,6 +4,7 @@ const db = require('../_helpers/database');
 const mongoose = require("mongoose");
 const User = db.User;
 const Job = db.Job;
+const Proposal = db.Proposal;
 
 
 module.exports = {
@@ -22,8 +23,10 @@ async function getAllJobs(req) {
 }
 
 //TODO (optional/bonus): delete an attendance object. The req object will contain the id of the attendance object.
-async function deleteJobListing(req) {
-    return await User.deleteOne({_id:req.body._id});
+async function deleteJobListing(id) {
+    console.log(id);
+    await Proposal.deleteMany({job:id});
+    return await Job.deleteOne({_id:id});
 }
 
 // TODO: here you need to process professor requests to create new attendance objects.

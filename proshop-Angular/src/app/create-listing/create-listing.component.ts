@@ -34,7 +34,7 @@ export class CreateListingComponent implements OnInit {
 
   ngOnInit(): void {
     this.createListingForm = this.formBuilder.group({
-      title: ['', Validators.required],
+      title: ['', Validators.required, Validators.maxLength(17)],
       budget: ['', [Validators.required, Validators.pattern('^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$')]],
       description: ['', Validators.required],
       completionDate: ['', Validators.required],

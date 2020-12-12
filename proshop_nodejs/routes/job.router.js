@@ -6,5 +6,6 @@ const authorize = require('../_helpers/authorize');
 
 router.post('/createjob', jobController.createJob);
 router.get('/getjobs', jobController.getJobs);
+router.delete('/:id', jobController.deleteJob);
 
 module.exports = router;

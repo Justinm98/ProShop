@@ -23,7 +23,7 @@ function getJobs(req,res,next){
 
 
 function deleteJob(req,res,next){
-    console.log('DeleteCourse()',req.params);
+    console.log('DeleteJob()',req.params);
     jobService.deleteJobListing(req.params.id).then(courses => {console.log('# of Courses sent:', courses.length);
         res.json(courses)}).catch(err => next(err));
 }

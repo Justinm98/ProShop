@@ -105,6 +105,14 @@ export class ProHomepageComponent implements OnInit {
     this.router.navigate(['pro/profile']);
   }
 
+  deleteProposal(id: string){
+    this.jobService.deleteProposal(id).subscribe(data => {
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
+  }
+
   onCurrentProposals(){
 
   }

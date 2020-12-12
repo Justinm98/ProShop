@@ -10,7 +10,7 @@ import {JobService} from '../_service/job.service';
 export class SearchResultItemComponent implements OnInit {
   @Input() job: Job;
   @Output() makeProposalEvent = new EventEmitter<string>();
-
+  @Output() deleteProposalEvent = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
@@ -21,4 +21,7 @@ export class SearchResultItemComponent implements OnInit {
     this.makeProposalEvent.emit(id);
   }
 
+  deleteProposal(id: string){
+    this.deleteProposalEvent.emit(id);
+  }
 }

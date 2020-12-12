@@ -51,7 +51,8 @@ export class UserHomepageComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-
+      this.jobs = null;
+      this.loadAllClasses();
     });
   }
 
