@@ -10,6 +10,7 @@ import {JobService} from '../_service/job.service';
 import {Job} from '../_model/job';
 import {NotificationService} from '../_service/notification.service';
 import {ViewJobInfoComponent} from '../view-job-info/view-job-info.component';
+import {CreateProposalComponent} from '../create-proposal/create-proposal.component';
 
 @Component({
   selector: 'app-user-homepage',

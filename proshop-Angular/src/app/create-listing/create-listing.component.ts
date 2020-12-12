@@ -19,7 +19,7 @@ export class CreateListingComponent implements OnInit {
   closeResult = '';
   loading = false;
   submitted = false;
-  private skillsArray: string[] = [];
+  skillsArray: string[] = ['Programming', 'Web Development', 'Graphic Design', 'Digital Marketing', 'Business', 'Music / Audio', 'Video'];
 
   constructor(private router: Router,
               private formBuilder: FormBuilder,
@@ -38,14 +38,7 @@ export class CreateListingComponent implements OnInit {
       budget: ['', [Validators.required, Validators.pattern('^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$')]],
       description: ['', Validators.required],
       completionDate: ['', Validators.required],
-      programming: [null],
-      webDev: [null],
-      graphicDesign: [null],
-      digitalMarketing: [null],
-      business: [null],
-      musicAudio: [null],
-      video: [null],
-      skills: [null]
+      skillCategory: [null]
     });
   }
 
@@ -53,32 +46,7 @@ export class CreateListingComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  // tslint:disable-next-line:typedef
-  createSkillsArray(){
 
-    if (this.createListingForm.value.programming != null && this.createListingForm.value.programming !== false){
-      this.skillsArray.push('Programming');
-    }
-    if (this.createListingForm.value.webDev != null && this.createListingForm.value.webDev !== false){
-      this.skillsArray.push('Web Development');
-    }
-    if (this.createListingForm.value.graphicDesign != null && this.createListingForm.value.graphicDesign !== false){
-      this.skillsArray.push('Graphic Design');
-    }
-    if (this.createListingForm.value.digitalMarketing != null && this.createListingForm.value.digitalMarketing !== false){
-      this.skillsArray.push('Digital Marketing');
-    }
-    if (this.createListingForm.value.business != null && this.createListingForm.value.business !== false){
-      this.skillsArray.push('Business');
-    }
-    if (this.createListingForm.value.musicAudio != null && this.createListingForm.value.musicAudio !== false){
-      this.skillsArray.push('Music / Audio');
-    }
-    if (this.createListingForm.value.video != null && this.createListingForm.value.video !== false) {
-      this.skillsArray.push('Video');
-    }
-    return this.skillsArray;
-  }
 
   get f() { return this.createListingForm.controls; }
 
@@ -89,7 +57,6 @@ export class CreateListingComponent implements OnInit {
       return;
     }
 
-    this.createListingForm.value.skills = this.createSkillsArray();
     this.jobService.createJob(this.createListingForm.value)
       .pipe(first())
       .subscribe(

@@ -7,7 +7,7 @@ export class Job {
   createdDate: Date;
   completionDate: Date;
   budget: number;
-  skills: [string];
+  skillCategory: string;
   _id: string;
   proposals: [Proposal];
 }

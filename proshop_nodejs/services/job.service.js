@@ -38,7 +38,7 @@ async function addJob(req) {
         description: jobInfo.description,
         createdDate: new Date(),
         completionDate: jobInfo.completionDate,
-        skills: jobInfo.skills
+        skillCategory: jobInfo.skillCategory
     });
 
     return await job.save();

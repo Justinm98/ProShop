@@ -29,24 +29,18 @@
     </mat-form-field>
   </div>
   <div class="form-group">
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="programming">Programming</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="webDev">Web Development</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="graphicDesign">Graphic Design</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="digitalMarketing">Digital Marketing</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="business">Business</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="musicAudio">Music/Audio</mat-checkbox>
-    <mat-checkbox class="skill-checkbox"
-                  formControlName="video">Videography</mat-checkbox>
+    <mat-form-field appearance="fill">
+      <mat-label>Job Category</mat-label>
+      <mat-select formControlName="skillCategory" class="form-control">
+        <mat-option *ngFor="let skill of skillsArray" [value]="skill">
+          {{skill}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
-
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="submit()">Ok</button>
 </div>
+</form>

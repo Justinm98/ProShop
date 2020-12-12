@@ -11,7 +11,7 @@ const schema = new Schema({
     description: { type: String, required: true, default:"No description set" },
     createdDate: { type: Date, default: Date.now },
     completionDate: { type: Date, required: false },
-    skills: [{ type: String, required: true }]
+    skillCategory: { type: String, required: true }
 });
 
 schema.set('toJSON', { virtuals: true });
