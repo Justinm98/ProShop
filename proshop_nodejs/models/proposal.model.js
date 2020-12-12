@@ -13,12 +13,13 @@ const schema = new Schema({
     duration: {type: String, required: true, default: '1 week'},
     chosen: {type: Boolean, default: false},
     dateCreated: {type: Date, default: Date.now()},
-    description: {type: String, required: false, default: ''}
+    description: {type: String, required: false, default: ''},
+    title: {type: String, required: true, default: ''}
 
 });
 
 //this makes startTime and course object id unique because it makes no sense to have two identical attendance tracker documents.
-schema.index({startTime:1, course:1}, { unique: true });
+//schema.index({startTime:1, course:1}, { unique: true });
 
 schema.set('toJSON', { virtuals: true });
 

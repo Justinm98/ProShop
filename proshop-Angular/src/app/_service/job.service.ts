@@ -34,7 +34,7 @@ export class JobService {
   }
 
   createProposal(proposal: Proposal) {
-    return this.http.post(`http://localhost:4000/job/createproposal`, proposal);
+    return this.http.post(`http://localhost:4000/proposal/create`, proposal);
   }
 
   jobSearch(str: string){

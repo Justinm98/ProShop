@@ -8,6 +8,9 @@ import {proInfo} from '../_model/proInfo';
 import {JobService} from '../_service/job.service';
 import {Job} from '../_model/job';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
+import {CreateListingComponent} from '../create-listing/create-listing.component';
+import {CreateProposalComponent} from '../create-proposal/create-proposal.component';
 
 
 @Component({
@@ -26,6 +29,7 @@ export class ProHomepageComponent implements OnInit {
   constructor(private router: Router,
               private authService: AuthService,
               private userService: UserService,
+              private dialog: MatDialog,
               private notifService: NotificationService,
               private jobService: JobService,
               private formBuilder: FormBuilder) {
@@ -46,7 +50,19 @@ export class ProHomepageComponent implements OnInit {
     });
   }
 
+  openDialogMakeProposal(id: string): void {
+    const dialogRef = this.dialog.open(CreateProposalComponent, {
+      width: '400px',
+    });
+    dialogRef.componentInstance.job = id;
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
+  }
+
   makeProposal(id: string) {
+    this.openDialogMakeProposal(id);
     return "";
   }
 
