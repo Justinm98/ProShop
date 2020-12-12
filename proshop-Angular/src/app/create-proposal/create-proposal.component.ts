@@ -19,6 +19,7 @@ export class CreateProposalComponent implements OnInit {
   closeResult = '';
   loading = false;
   submitted = false;
+  job: string;
 
   constructor(private router: Router,
               private formBuilder: FormBuilder,
@@ -37,6 +38,7 @@ export class CreateProposalComponent implements OnInit {
       author: ['', Validators.required],
       cost: ['', [Validators.required, Validators.pattern('^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$')]],
       writeup: ['', Validators.required],
+      id: [''],
       estimatedCompletionDate: ['', Validators.required]
     });
   }
@@ -53,7 +55,7 @@ export class CreateProposalComponent implements OnInit {
     if (!this.createProposalForm.valid) {
       return;
     }
-
+    this.createProposalForm.value.job = this.job;
     this.jobService.createProposal(this.createProposalForm.value)
       .pipe(first())
       .subscribe(

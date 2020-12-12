@@ -1,7 +1,7 @@
-<h1 mat-dialog-title>Create Listing</h1>
+<h1 mat-dialog-title>Create Proposal</h1>
 <form [formGroup]="createProposalForm" (ngSubmit)="submit()">
   <div mat-dialog-content>
-    <p>Enter Listing Information</p>
+    <p>Enter Proposal Information</p>
     <div class="form-group">
       <mat-form-field>
         <mat-label>Title</mat-label>
@@ -10,19 +10,19 @@
     </div>
     <div class="form-group">
       <mat-form-field>
-        <mat-label>Title</mat-label>
+        <mat-label>Created By</mat-label>
         <input matInput type="text" formControlName="author" class="form-control" placeholder="" >
       </mat-form-field>
     </div>
     <div class="form-group">
       <mat-form-field>
-        <mat-label>Budget</mat-label>
+        <mat-label>Cost</mat-label>
         <input matInput type="text" formControlName="cost" class="form-control" placeholder="$0" >
       </mat-form-field>
     </div>
     <div class="form-group">
       <mat-form-field class="example-full-width">
-        <mat-label>Description</mat-label>
+        <mat-label>My Proposal Pitch</mat-label>
         <textarea matInput type="text" formControlName="writeup" class="form-control" placeholder=""></textarea>
       </mat-form-field>
     </div>

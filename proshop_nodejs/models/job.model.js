@@ -11,7 +11,8 @@ const schema = new Schema({
     description: { type: String, required: true, default:"No description set" },
     createdDate: { type: Date, default: Date.now },
     completionDate: { type: Date, required: false },
-    skillCategory: { type: String, required: true }
+    skillCategory: { type: String, required: true },
+    proposals: [{type: Schema.Types.ObjectId, ref: 'Proposal'}]
 });
 
 schema.set('toJSON', { virtuals: true });
