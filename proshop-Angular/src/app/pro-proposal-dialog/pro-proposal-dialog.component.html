@@ -1,1 +1,22 @@
-<p>pro-proposal-dialog works!</p>
+<h2>My Proposals</h2>
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor="let proposal of proposals">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{proposal.title}}, For {{proposal.job.createdByUser.username}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{proposal.job.budget}} / My bid: {{proposal.cost}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>What {{proposal.job.createdByUser.username}} Needs:</p>
+    <p>{{proposal.job.description}}</p>
+    <p>{{proposal.job.createdByUser.username}}'s email: {{proposal.job.createdByUser.email}}</p>
+    <mat-action-row style="position: relative">
+      <button mat-raised-button style="position: absolute; left: 1px; top: 6px; color: red;">Delete</button>
+      <mat-icon *ngIf="proposal.chosen; else elseblock" style="font-size: 20px" color="primary">check_circle_outline</mat-icon>
+      <ng-template #elseblock>You have need been selected for this job yet!</ng-template>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<!--*ngFor="let proposal of proposals" [proposal]="proposal"-->

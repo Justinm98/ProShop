@@ -8,7 +8,8 @@ module.exports = {
     deleteProposal,
     add,
     select,
-    getProposalByJobID
+    getProposalByJobID,
+    getAllProposalsForPro
 }
 
 
@@ -44,7 +45,7 @@ async function add(req) {
     await job.save();
 
     //populate missing fields in the course object
-    proposal.createdBy = req.user.sub;
+    proposal.createdByPro = req.user.sub;
     proposal.createdDate =  Date.now();
 
     proposal = new Proposal(proposal);
@@ -56,4 +57,18 @@ async function add(req) {
 
 async function select(req) {
     return await Proposal.updateOne({'_id': mongoose.Types.ObjectId(req.body.id)}, {$set: {chosen: true}});
+}
+
+async function getAllProposalsForPro(req){
+    // const proposals = await Proposal.find();
+    // console.log(proposals);
+    return await Proposal.find({'createdByPro': mongoose.Types.ObjectId(req.params.id)}).populate(
+        {path:'job',
+        select:'createdByUser description skillCategory budget',
+        populate: {
+            path: 'createdByUser',
+            select: 'username email'
+            }
+        });
+
 }

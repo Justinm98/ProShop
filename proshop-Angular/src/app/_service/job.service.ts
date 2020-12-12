@@ -15,7 +15,9 @@ export class JobService {
     return this.http.get<Job[]>(`http://localhost:4000/job/getjobs`);
   }
 
-
+  getProposalByProID(id: string){
+    return this.http.get<Proposal[]>(`http://localhost:4000/proposal/getProposalsByProID/${id}`);
+  }
 
   //TODO: notice this new function.
   getProposalsForJob(jobID: string) {
