@@ -10,6 +10,7 @@ import {Job} from '../_model/job';
 export class ViewJobInfoComponent implements OnInit {
 
   job: Job;
+  delete = false;
 
   constructor(public dialogRef: MatDialogRef<ViewJobInfoComponent>) { }
 
@@ -17,6 +18,10 @@ export class ViewJobInfoComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  deleteJob(id: string) {
+    this.delete = true;
   }
 
 

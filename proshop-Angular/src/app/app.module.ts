@@ -32,6 +32,7 @@ import { ProProposalDialogComponent } from './pro-proposal-dialog/pro-proposal-d
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

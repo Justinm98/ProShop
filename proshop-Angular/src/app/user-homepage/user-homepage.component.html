@@ -1,7 +1,21 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
     <div class="sidebar-button">
-      <button mat-raised-button (click)="openDialogAddJob()">Create Job Listing</button>
+
+      <mat-list>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button (click)="onProfileBtn()"> Profile </button>
+        </mat-list-item>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button (click)="openDialogAddJob()">Create Job Listing</button>
+        </mat-list-item>
+        <mat-list-item class="profile-info">
+          <button class="sidebar-button" mat-flat-button (click)="logout()"> Logout </button>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div>
+
     </div>
 
   </mat-sidenav>
@@ -15,12 +29,6 @@
         <span>ProShop</span>
         <span class="example-spacer"></span>
         <div>{{currentUser.username}}</div>
-        <button mat-icon-button [disableRipple]="true" class="example-icon" (click)="profile()" aria-label="Example icon-button with share icon">
-
-        </button>
-        <button mat-flat-button [disableRipple]="true" (click)="logout()" class="example-icon">
-          logout
-        </button>
       </mat-toolbar>
 
       <!-- Current Client Jobs available -->

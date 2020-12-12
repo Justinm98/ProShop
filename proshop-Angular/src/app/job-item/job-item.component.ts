@@ -56,6 +56,13 @@ export class JobItemComponent implements OnInit {
       width: '400px',
     });
     dialogRef.componentInstance.job = this.job;
+
+    dialogRef.beforeClosed().subscribe(result => {
+      if (dialogRef.componentInstance.delete === true) {
+        this.jobService.delete(this.job._id);
+      }
+    });
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
 
@@ -70,6 +77,8 @@ export class JobItemComponent implements OnInit {
     this.jobService.getProposalsForJob(this.job._id).subscribe(proposals => {
       dialogRef.componentInstance.proposals = proposals;
     });
+
+
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

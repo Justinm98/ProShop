@@ -1,47 +1,31 @@
-<mat-sidenav-container class="example-container" >
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    <div class="sidebar-button">
-      <button mat-raised-button class="nav-buttons" (click)="home()">Home</button>
-    </div>
-  </mat-sidenav>
+<div class="content-wrapper">
+  <!-- Navbar -->
+  <mat-toolbar id="navbar">
+    <button mat-icon-button [disableRipple]="true" (click)="onHomeBtn()" class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon style="font-size: 40px">home</mat-icon>
+    </button>
+  </mat-toolbar>
 
-  <mat-sidenav-content>
-    <div class="content-wrapper">
-      <!-- Navbar -->
-      <mat-toolbar id="navbar">
-        <button mat-icon-button class="sidebar-toggle-btn" (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span>ProShop</span>
-        <span class="example-spacer"></span>
-        <div class="user-profile-header">User Profile</div>
-
-        <button mat-flat-button [disableRipple]="true" (click)="logout()" class="example-icon">
-          logout
-        </button>
-      </mat-toolbar>
-
-      <!-- Current Client Jobs available -->
-      <!-- TODO: make a job board, create client job component -->
-      <div class="profile-content">
-        <mat-card class="profile-info-card">
-          <mat-list>
-            <mat-list-item class="profile-info">
-              <mat-icon class="profile-info-icons" style="font-size: 40px">person_outline</mat-icon><p class="profile-label">UserName - </p>{{currentUser.username}}
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item class="profile-info"><p class="profile-label">First Name - </p>{{currentUser.firstName}}</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item class="profile-info"><p class="profile-label">Last Name - </p>{{currentUser.lastName}}</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item class="profile-info"><p class="profile-label">Email Address - </p>{{currentUser.email}}</mat-list-item>
-          </mat-list>
-        </mat-card>
-      </div>
-
-
-    </div>
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
+  <div class="pro-info-container">
+    <mat-card id="profile-info-card">
+      <mat-card-title style="margin-bottom: 50px">
+        <div class="profile-pic-container">
+          <div id="profile-pic">
+            {{currentUser.firstName | slice:0:1}}{{currentUser.lastName | slice:0:1}}
+          </div>
+        </div>
+        <div style="margin-bottom: 5px;">{{currentUser.firstName}} {{currentUser.lastName}} ({{currentUser.username}})</div>
+      </mat-card-title>
+      <mat-card-content>
+        <div id="links-container">
+          <h2>First Name</h2>
+          <b>{{currentUser.firstName}}</b>
+          <h2>Last Name</h2>
+          <b>{{currentUser.lastName}}</b>
+          <h2>Email</h2>
+          <b>{{currentUser.email}}</b>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

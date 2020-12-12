@@ -16,8 +16,7 @@ export class UserProfileComponent implements OnInit {
   opened: boolean;
   currentUser: User;
 
-  constructor(private formBuilder: FormBuilder,
-              private router: Router,
+  constructor(private router: Router,
               private authService: AuthService,
               public dialog: MatDialog,
               public jobService: JobService,
@@ -29,13 +28,14 @@ export class UserProfileComponent implements OnInit {
     this.opened = false;
   }
 
-  home() {
-    this.router.navigate(['client/homepage']);
-  }
 
   logout() {
     this.authService.logout();
     this.router.navigate(['/']);
+  }
+
+  onHomeBtn(){
+    this.router.navigate(['user/homepage']);
   }
 
 }

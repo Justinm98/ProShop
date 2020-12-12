@@ -75,6 +75,10 @@ export class UserHomepageComponent implements OnInit {
     //this.router.navigate(['/classattendances', {courseID: id}]);
   }
 
+  onProfileBtn(){
+    this.router.navigate(['user/profile']);
+  }
+
   deleteJob(id: string) {
     this.jobService.delete(id).pipe(first()).subscribe(() => {
       this.jobs = null;

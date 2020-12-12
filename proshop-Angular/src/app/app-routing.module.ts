@@ -14,6 +14,7 @@ const routes: Routes = [{path: '' , component: LoginComponent},
   {path: 'pro/homepage', component: ProHomepageComponent},
   {path: 'pro/info-register', component: ProInfoRegisterComponent},
   {path: 'pro/profile', component: ProProfileComponent},
+  {path: 'user/profile', component: UserProfileComponent},
   { path: '**', redirectTo: '' }];
 ;
 
