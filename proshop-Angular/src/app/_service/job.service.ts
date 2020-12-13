@@ -40,7 +40,7 @@ export class JobService {
   }
 
   selectProposal(id: string){
-    return this.http.post(`http://localhost:4000/proposal/select`, id);
+    return this.http.post(`http://localhost:4000/proposal/select`, {_id: id});
   }
 
   jobSearch(str: string){

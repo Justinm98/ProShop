@@ -56,7 +56,10 @@ async function add(req) {
 }
 
 async function select(req) {
-    return await Proposal.updateOne({'_id': mongoose.Types.ObjectId(req.body.id)}, {$set: {chosen: true}});
+    console.log(req.body._id);
+    let proposal = await Proposal.findOne({'_id': mongoose.Types.ObjectId(req.body._id)});
+    proposal.chosen = true;
+    return await proposal.save();
 }
 
 async function getAllProposalsForPro(req){

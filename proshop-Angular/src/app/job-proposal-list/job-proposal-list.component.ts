@@ -22,9 +22,7 @@ export class JobProposalListComponent implements OnInit {
   }
 
   chooseProposal(id: string) {
-    this.jobService.selectProposal(id).subscribe(data => {
-      this.notifService.showNotif('You have selected a proposal!', 'Okay');
-    });
+
   }
 
 

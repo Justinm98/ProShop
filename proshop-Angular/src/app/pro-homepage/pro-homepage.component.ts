@@ -40,11 +40,12 @@ export class ProHomepageComponent implements OnInit {
           console.log(data);
           this.proData = data;
       },
-        err => {console.log(err)});
+        err => {console.log(err);
+      });
   }
 
   ngOnInit(): void {
-    //this.loadAllClasses();
+    this.loadAllClasses();
     this.opened = false;
     this.searchForm = this.formBuilder.group({
       searchString: ['']
